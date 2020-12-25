@@ -1,0 +1,29 @@
+@import '../../styles/1_helpers/mixins';
+
+.link {
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    font-size: 0.875rem;
+    
+    .coming-soon {
+        padding: 0.25rem 0.5rem;
+        background-color: var(--bg-neutral);
+        font-size: 0.625rem;
+        border-radius: 0.5rem;
+        opacity: 0;
+        @include transition(opacity, 200ms);
+    }
+
+    &:hover {
+        border-left: 2px solid var(--primary);
+
+        .coming-soon {
+            opacity: 1;
+        } 
+    }
+
+    &.active {
+        border-left: 2px solid var(--primary);
+    }
+
+}

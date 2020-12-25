@@ -1,0 +1,63 @@
+@import '../../styles/1_helpers/variables';
+@import '../../styles/1_helpers/mixins';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .hero-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 3rem 0;
+
+        @include media-breakpoints($breakpoint-lg) {
+            flex-wrap: nowrap;
+        }
+        
+    }
+
+    .header-intro {
+        flex: 0 0 100%;
+
+        @include media-breakpoints($breakpoint-lg) {
+            flex: 1 0 50%;
+        }
+    }
+    .header-graphics {
+        flex: 0 0 100%;
+
+        @include media-breakpoints($breakpoint-lg) {
+            flex: 0 1 50%;
+        }
+    }
+    .intro {
+        font-size: 1rem;
+        font-weight: var(--font-medium);
+    }
+
+    .headline {
+        width: 100%;
+        @include media-breakpoints($breakpoint-lg) {
+           width: 75%;
+        }
+
+    }
+}
+
+.card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary);
+    width: 40vw;
+    height: 600px;
+    transform: rotate(7deg);
+}

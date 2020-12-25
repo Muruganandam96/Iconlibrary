@@ -1,0 +1,33 @@
+.btn {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-align: center;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: var(--font-semibold);
+  display: inline-block;
+  @include transition(transform, 200ms);
+
+   &.btn-lg {
+    padding: 1.25rem 2rem;
+    width: 12rem;
+    font-size: 1rem;
+
+    &.btn-primary {
+     background-color: var(--accent);
+      @extend .btn-shadow;
+
+    }
+
+  }
+
+  &.btn-secondary {  
+    padding: 0.625rem 2rem;
+    font-size: 0.875rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
